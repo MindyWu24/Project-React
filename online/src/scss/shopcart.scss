@@ -262,7 +262,6 @@ $theme-vh: calc(100vh - 3.8em);
           &:nth-child(1) {
             background-color: $theme-green;
             @include bg-contain;
-            background-image: url('../images/Shopcart/steps/check.png');
             @include after('運送方式', 6em, 1.5em) {
               @include absolute-lt(50%, 220%);
               transform: translate(-50%, -50%);
@@ -421,7 +420,6 @@ $theme-vh: calc(100vh - 3.8em);
               @include after('', 1.1em, 1.1em) {
                 @include absolute-center;
                 @include bg-contain;
-                background-image: url('../images/Login/check-icon.svg');
                 opacity: 0;
               }
             }
@@ -477,7 +475,6 @@ $theme-vh: calc(100vh - 3.8em);
           &:nth-child(1) {
             background-color: $theme-green;
             @include bg-contain;
-            background-image: url('../images/Shopcart/steps/check-icon.svg  ');
             @include after('運送方式', 6em, 1.5em) {
               @include absolute-lt(50%, 220%);
               transform: translate(-50%, -50%);
@@ -487,7 +484,6 @@ $theme-vh: calc(100vh - 3.8em);
           &:nth-child(3) {
             background-color: $theme-green;
             @include bg-contain;
-            background-image: url('../images/Shopcart/steps/check-icon.svg  ');
             @include after('付款方式', 6em, 1.5em) {
               @include absolute-lt(50%, 220%);
               transform: translate(-50%, -50%);
@@ -497,7 +493,6 @@ $theme-vh: calc(100vh - 3.8em);
           &:nth-child(5) {
             background-color: $theme-green;
             @include bg-contain;
-            background-image: url('../images/Shopcart/steps/check-icon.svg  ');
             @include after('確認完成', 6em, 1.5em) {
               @include absolute-lt(50%, 220%);
               transform: translate(-50%, -50%);
