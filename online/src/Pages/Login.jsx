@@ -12,7 +12,7 @@ const Login = () => {
           <img src="../images/login/pic-1.png" alt="" />
         </figure>
         <figure className={fade ? 'sign-img' : 'sign-img fadeUp'}>
-          <img src="../images/login/pic-2.png" alt="" />
+          <img src="./Project-React/images/login/pic-2.png" alt="" />
         </figure>
       </article>
       <article className="Login__content">

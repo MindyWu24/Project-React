@@ -21,12 +21,18 @@ function Header() {
             </Link>
 
             <figure>
-              <img src="./images/header/header-product.png" alt="" />
+              <img
+                src="./Project-React/images/header/header-product.png"
+                alt=""
+              />
             </figure>
           </li>
         </ul>
         <section className="Homepage__header__imgBox">
-          <img src="./images/header/header__animation.svg" alt="" />
+          <img
+            src="./Project-React/images/header/header__animation.svg"
+            alt=""
+          />
         </section>
       </article>
     </header>
