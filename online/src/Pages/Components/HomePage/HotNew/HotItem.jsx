@@ -2,7 +2,10 @@ const HotItem = () => {
   return (
     <li className="item">
       <figure className="item__img">
-        <img src="/images/Homepage/art1/hot/hot-product.png" alt="" />
+        <img
+          src="./Project-React/images/Homepage/art1/hot/hot-product.png"
+          alt=""
+        />
       </figure>
       <section className="item__content">
         <h1>Minor Figures 燕麥奶 (6入)</h1>

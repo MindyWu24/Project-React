@@ -2,7 +2,7 @@ const HeartItem = () => {
   return (
     <li className="HeartList__items__item">
       <figure className="img">
-        <img src="./images/navbar/heart/p1.png" alt="" />
+        <img src="./Project-React/images/navbar/heart/p1.png" alt="" />
       </figure>
       <section className="title">
         <p>CALIFA FARMS</p>

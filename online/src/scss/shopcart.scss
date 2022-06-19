@@ -261,6 +261,7 @@ $theme-vh: calc(100vh - 3.8em);
           color: $theme-green;
           &:nth-child(1) {
             background-color: $theme-green;
+            background-image: url('../images/Shopcart/steps/check.png');
             @include bg-contain;
             @include after('運送方式', 6em, 1.5em) {
               @include absolute-lt(50%, 220%);
@@ -474,6 +475,7 @@ $theme-vh: calc(100vh - 3.8em);
           color: $theme-green;
           &:nth-child(1) {
             background-color: $theme-green;
+            background-image: url('../images/Shopcart/steps/check.png');
             @include bg-contain;
             @include after('運送方式', 6em, 1.5em) {
               @include absolute-lt(50%, 220%);
@@ -483,6 +485,7 @@ $theme-vh: calc(100vh - 3.8em);
           }
           &:nth-child(3) {
             background-color: $theme-green;
+            background-image: url('../images/Shopcart/steps/check.png');
             @include bg-contain;
             @include after('付款方式', 6em, 1.5em) {
               @include absolute-lt(50%, 220%);
@@ -492,6 +495,7 @@ $theme-vh: calc(100vh - 3.8em);
           }
           &:nth-child(5) {
             background-color: $theme-green;
+            background-image: url('../images/Shopcart/steps/check.png');
             @include bg-contain;
             @include after('確認完成', 6em, 1.5em) {
               @include absolute-lt(50%, 220%);
