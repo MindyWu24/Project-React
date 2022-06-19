@@ -1,0 +1,116 @@
+@import './import/style';
+
+.footer {
+  width: 100%;
+  @include flex-center(center, column);
+  background-color: $theme-lightgreen;
+  &__wave {
+    @include absolute-lb(0%, 100%);
+    width: 100%;
+    @include img-w(100%, contain);
+  }
+  .join {
+    width: 60%;
+    @include flex-start(center, row);
+    margin-top: 3em;
+    &__title {
+      width: 45%;
+      @include flex-start(center, row);
+      span {
+        @include size(3.5em, 3.5em);
+        margin-right: 2em;
+        @include bg-contain;
+        background-image: url('../images/footer/celebrate-icon.png');
+      }
+      ul {
+        li {
+          h1 {
+            @include font(1.3em, 2em, 600, 1px);
+          }
+          a {
+            @include font(0.9em, 2em, 400, 2px);
+          }
+        }
+      }
+    }
+    &__content {
+      width: 55%;
+      ul {
+        padding: 0 1em;
+        li {
+          @include font(0.9em, 2em, 400, 1px);
+          input {
+            @include font(0.9em, 2em, 400, 2px);
+            width: 50%;
+            border: 1px solid $theme-darkgreen;
+            background-color: transparent;
+            border-radius: 3px;
+            margin-top: 0.5em;
+            padding: 0 0.5em;
+          }
+          button {
+            @include font(0.5em, 2em, 400, 2px);
+            height: 4em;
+            margin-left: 1em;
+            border: none;
+            background-color: $theme-darkgreen;
+            border-radius: 3px;
+            color: #fff;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .menu {
+    width: 60%;
+    margin: 5em 0;
+    @include flex-center(center, row);
+    .menu__logo {
+      width: 40%;
+      @include img-w(60%, contain);
+    }
+    .menu__list {
+      width: 60%;
+      @include flex-around(flex-start, row);
+      ul {
+        h3 {
+          @include font(1em, 2em, 600, 2px);
+          margin-bottom: 2em;
+          color: $theme-darkgreen;
+        }
+        li {
+          @include font(0.5em, 2em, 400, 1px);
+          margin-top: 2em;
+          color: $theme-darkgreen;
+        }
+        .icon {
+          @include flex-start(center, row);
+          span {
+            @include bg-contain;
+            @include size(5em, 5em);
+            &:nth-child(1) {
+              background-image: url('../images/footer/facebook.svg');
+            }
+            &:nth-child(2) {
+              margin: 0 2em;
+              background-image: url('../images/footer/Instagram.png');
+            }
+            &:nth-child(3) {
+              background-image: url('../images/footer/line.png');
+            }
+          }
+        }
+      }
+    }
+  }
+  .copyright {
+    width: 100%;
+    background-color: $theme-green;
+    p {
+      color: #fff;
+      text-align: center;
+      @include font(1em, 1.5em, 400, 0px);
+    }
+  }
+}

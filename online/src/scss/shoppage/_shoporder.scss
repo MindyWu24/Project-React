@@ -1,0 +1,168 @@
+@import '../import/style';
+.shopOder {
+  @include fixed-rt(0%, 3.8em);
+  width: 50%;
+  height: calc(100vh - 3.8em);
+  padding: 2em;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  &__container {
+    @include flex-center(center, column);
+    .title {
+      padding: 0 1em;
+      width: 80%;
+      @include font(0.8em, 2em, 400, 0px);
+      h1 {
+        color: $theme-darkgreen;
+        @include font(1.6em, 3em, 600, 1px);
+      }
+      li {
+        @include flex-start(center, row);
+        color: $theme-darkgreen;
+        h2 {
+          margin-right: 0.3em;
+          @include font(1.6em, 3em, 600, 1px);
+          color: $theme-darkgreen;
+        }
+        h3 {
+          margin-left: 0.3em;
+          color: $theme-red;
+          @include font(1.6em, 3em, 600, 1px);
+        }
+      }
+    }
+    .button {
+      width: 80%;
+      padding: 1em 1em;
+      &__number {
+        @include flex-start(center, row);
+        label {
+          @include font(1.2em, 1.5em, 600, 1px);
+          color: $theme-darkgreen;
+        }
+        li {
+          @include flex-center(center, row);
+          margin-left: 3em;
+          span {
+            @include size(2em, 2em);
+            background-color: $theme-darkgreen;
+            border-radius: 2px;
+            cursor: pointer;
+            &:nth-child(1) {
+              @include after('', 1.2em, 1.2em) {
+                @include absolute-center;
+                @include bg-contain;
+                background-image: url('../../images/Shoppage/Oder/minus-icon.svg');
+              }
+            }
+            &:nth-child(3) {
+              @include after('', 1.2em, 1.2em) {
+                @include absolute-center;
+                @include bg-contain;
+                background-image: url('../../images/Shoppage/Oder/plus-icon.svg');
+              }
+            }
+          }
+          input {
+            width: 4em;
+            height: 2em;
+            border: none;
+            text-align: center;
+          }
+        }
+      }
+      &__shopCart {
+        @include flex-start(center, row);
+        margin-top: 1.5em;
+        li {
+          @include size(2em, 2em);
+          margin-right: 0.7em;
+          @include bg-contain;
+          cursor: pointer;
+          &:nth-child(1) {
+            background-image: url('../../images/Shoppage/Oder/heart-icon.svg');
+          }
+          &:nth-child(2) {
+            background-image: url('../../images/Shoppage/Oder/ring-icon.svg');
+          }
+        }
+        button {
+          background-color: $theme-darkgreen;
+          border: none;
+          @include size(10em, 2.5em);
+          border-radius: 5px;
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+    }
+    .info {
+      width: 80%;
+      margin-top: 1.5em;
+      li {
+        border-bottom: 1px solid #ccc;
+        padding: 1em 1em;
+        @include font(0.8em, 2em, 400, 0px);
+        @include flex-between(center, row);
+        label {
+          width: 20%;
+          margin-right: 1em;
+          font-weight: 600;
+          color: $theme-darkgreen;
+          font-size: 1.2em;
+        }
+        .link {
+          width: 80%;
+          a {
+            color: $theme-brown;
+            @include after('', 1em, 1em) {
+              @include absolute-lt(105%, 50%);
+              transform: translate(0%, -50%);
+              @include bg-contain;
+              background-image: url('../../images/Shoppage/Oder/herf-icon.svg');
+            }
+          }
+        }
+
+        p {
+          width: 80%;
+          color: $theme-darkgreen;
+          span {
+            margin-left: 3em;
+            color: $theme-darkgreen;
+          }
+        }
+        .down__btn {
+          @include size(2em, 2em);
+          cursor: pointer;
+          @include bg-contain;
+        }
+        &:first-child {
+          border-top: 1px solid #ccc;
+        }
+      }
+      .downList {
+        background-color: $theme-lightgreen;
+        li {
+          border: none;
+        }
+        &__text {
+          padding: 0 0.5em;
+          width: 100%;
+          label {
+            width: 40%;
+          }
+          p {
+            color: $theme-red;
+            font-weight: 600;
+            span {
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+  }
+}

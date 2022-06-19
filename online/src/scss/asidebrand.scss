@@ -1,0 +1,70 @@
+@import './import/style';
+
+.AsideBrand {
+  @include fixed-rt(0%, 3.8em);
+  z-index: 99;
+  width: 17em;
+  padding-top: 5em;
+  height: calc(100vh - 3.8em);
+  background-color: rgba($color: $theme-white, $alpha: 0.7);
+  @include blur(180%, 5px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+  &__delete {
+    @include absolute-rt(0.5em, 2em);
+    @include size(1.3em, 1.3em);
+    @include bg-contain;
+    background-image: url('../images/navbar/aside/delete-icon.svg');
+    cursor: pointer;
+    &:active {
+      transform: rotate(30deg);
+    }
+  }
+  &__search {
+    width: 100%;
+    margin: 1.5em 0;
+    @include flex-center(center, row);
+    span {
+      @include size(2em, 2em);
+      @include bg-contain;
+      margin-right: 0.5em;
+      background-image: url('../images/navbar/aside/search-icon.svg');
+    }
+    input {
+      @include size(calc(100% - 5em), 2em);
+      padding: 1em;
+      border: 1px solid $theme-darkgreen;
+      border-radius: 2em;
+      background-color: transparent;
+    }
+  }
+  li {
+    @include flex-between(center, row);
+    padding: 0.5em 1.5em;
+    span {
+      @include size(1.3em, 1.3em);
+      @include bg-contain;
+      background-image: url('../images/navbar/aside/plus-icon.svg');
+      cursor: pointer;
+    }
+    h1,
+    a {
+      @include font(1.2em, 2em, 400, 1px);
+      color: #777;
+      cursor: pointer;
+    }
+    &:hover {
+      background-color: $theme-white;
+      a {
+        color: $theme-darkgreen;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+}

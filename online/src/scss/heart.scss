@@ -1,0 +1,84 @@
+@import './import/style';
+
+.HeartList {
+  @include fixed-rt(0%, 3.8em);
+  z-index: 99;
+  width: 25em;
+  height: calc(100vh - 3.8em);
+  background-color: #f7f0ea;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+  padding: 0 2em;
+  h1 {
+    @include font(1.5em, 2em, 600, 2px);
+    text-align: center;
+    color: $theme-darkgreen;
+    border-bottom: 1px solid #ccc;
+    padding: 1em 0;
+    margin-bottom: 1em;
+  }
+  .wave {
+    display: block;
+    @include absolute-rt(100%, 0%);
+    width: 30%;
+    height: 100%;
+    @include bg-cover;
+    overflow: hidden;
+    background-image: url('../images/navbar/heart/wave.png');
+    background-position: top left;
+  }
+  .close {
+    display: block;
+    @include absolute-rt(104%, 1.8em);
+    @include size(2.7em, 2.7em);
+    @include bg-cover;
+    background-image: url('../images/navbar/heart/close-icon.svg');
+    cursor: pointer;
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+  &__items {
+    @include flex-start(center, column);
+    height: 70vh;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+    &__item {
+      width: 100%;
+      background-color: $theme-white;
+      border-radius: 1em;
+      @include flex-start(center, row);
+      padding: 0.5em;
+      margin: 0.5em 0;
+      .img {
+        width: 30%;
+        @include img-w(100%, contain);
+      }
+      .title {
+        p {
+          @include font(0.8em, 2em, 400, 1px);
+          &:nth-child(3) {
+            font-weight: 600;
+            color: $theme-darkgreen;
+          }
+        }
+
+        margin-left: 1.5em;
+      }
+      .heart {
+        @include size(2.2em, 2.2em);
+        @include bg-contain;
+        background-image: url('../images/navbar/heart/red-heart.svg');
+        margin-left: 1.8em;
+      }
+    }
+  }
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+}

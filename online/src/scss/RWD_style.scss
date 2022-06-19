@@ -1,0 +1,21 @@
+@import './import/RWD';
+
+@include rwd-L-down {
+  html {
+    font-size: 14px;
+  }
+}
+@include rwd-M-up {
+  .phone-btn {
+    display: none;
+  }
+  .AsideBrand {
+    display: none;
+  }
+}
+
+@include rwd-M-down {
+  .navbar__menu__list {
+    display: none;
+  }
+}

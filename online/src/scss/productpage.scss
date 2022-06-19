@@ -1,0 +1,144 @@
+@import './import/style';
+
+.ProductPage {
+  &__aside {
+    @include fixed-lt(0%, 25%);
+    z-index: 8;
+    width: 20%;
+    padding-left: 4%;
+    padding-right: 1%;
+    li {
+      width: 100%;
+      padding: 0 0.5em;
+      border-radius: 5px;
+      a {
+        display: block;
+        @include size(100%, 100%);
+        @include font(1em, 2.5em, 400, 1px);
+      }
+      &:hover {
+        background-color: $theme-green;
+        a {
+          color: $theme-white;
+        }
+      }
+    }
+  }
+  .product {
+    &--bgc1 {
+      background-color: #e2e2e2;
+    }
+    &--bgc2 {
+      background-color: $theme-white;
+    }
+    &--bgc3 {
+      background-color: $theme-lightgreen;
+    }
+    &--bgc4 {
+      background-color: $theme-pro-yellow;
+      padding-bottom: 16em;
+    }
+    width: 100%;
+    padding: 5.8em 2em 10em 20%;
+    &__intro {
+      @include flex-around(flex-start, row);
+      li {
+        &:nth-child(1) {
+          width: 13%;
+          padding: 0.7em;
+          img {
+            width: 100%;
+            object-fit: contain;
+          }
+        }
+        &:nth-child(2) {
+          border-right: 1px solid #ccc;
+          padding-right: 1.5em;
+          width: 50%;
+          h1 {
+            @include font(1.5em, 2em, 600, 1px);
+            color: $theme-darkgreen;
+          }
+          p {
+            @include font(1em, 1.7em, 400, 2px);
+            color: $theme-darkgreen;
+            margin-top: 0.8em;
+            span {
+              display: block;
+              @include font(1.1em, 1.5em, 600, 1px);
+              margin-top: 0.5em;
+              color: $theme-darkgreen;
+            }
+          }
+        }
+        &:nth-child(3) {
+          width: 30%;
+          h2 {
+            @include font(1.1em, 1.5em, 600, 1px);
+            color: $theme-darkgreen;
+            padding-top: 0.5em;
+            margin-bottom: 1em;
+          }
+          p {
+            @include font(1em, 1.7em, 400, 2px);
+            color: $theme-darkgreen;
+          }
+        }
+      }
+    }
+    &__list {
+      @include flex-center(center, row);
+      li {
+        width: 30%;
+        @include flex-center(center, column);
+        figure {
+          width: 60%;
+          overflow: hidden;
+          @include img-w(100%, contain);
+        }
+        h3 {
+          @include font(1.1em, 1.5em, 600, 0);
+          margin: 0.8em 0;
+          color: #555;
+        }
+        a {
+          width: 70%;
+          @include font(1.1em, 3.5em, 600, 0);
+          text-align: center;
+          color: #555;
+          @include bg-cover;
+        }
+        .blue-bgc {
+          background-image: url(/images/Productpage/blue-bgc.png);
+        }
+        .yellow-bgc {
+          background-image: url(/images/Productpage/yellow-bgc.png);
+        }
+      }
+    }
+    &__bottomBgc {
+      @include absolute-rb(0%, 0%);
+      width: 80%;
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.product__list--m1 {
+  margin-top: 3.5em;
+}
+
+.product__list--m2 {
+  margin-top: 4.5em;
+}
+
+.product__list--m3 {
+  margin-top: 4.5em;
+}
+
+.product__list--m4 {
+  margin-top: 3.5em;
+}

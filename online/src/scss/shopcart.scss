@@ -1,0 +1,588 @@
+@import './import/style';
+
+$theme-vh: calc(100vh - 3.8em);
+
+.ShopCart {
+  @include size(100%, $theme-vh);
+  @include flex-center(center, row);
+  background-color: $theme-white;
+  &__list {
+    width: 55%;
+    @include flex-center(center, column);
+    h1 {
+      width: 80%;
+      @include font(1.5em, 1.5em, 600, 1px);
+      color: $theme-darkgreen;
+      margin: 0.5em 0;
+    }
+    .carts {
+      @include size(80%, 70vh);
+      padding: 0 1.5em 18vh 1.5em;
+      overflow: auto;
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+
+      .cart {
+        @include flex-around(center, row);
+        padding: 2em 0;
+        border-bottom: 1px solid #ccc;
+        &__img {
+          width: 15%;
+          @include img-w(100%, contain);
+        }
+        &__title {
+          @include font(0.8em, 1.5em, 400, 1px);
+        }
+        &__btn {
+          width: 20%;
+          @include flex-center(center, row);
+          border-radius: 0.5em;
+          overflow: hidden;
+          background-color: $theme-darkgreen;
+          span {
+            @include size(2em, 2em);
+            cursor: pointer;
+            &:nth-child(1) {
+              @include after('', 1em, 1em) {
+                @include absolute-center;
+                @include bg-contain;
+                background-image: url('../images/Shopcart/cart/minus-icon.svg');
+              }
+            }
+            &:nth-child(3) {
+              @include after('', 1em, 1em) {
+                @include absolute-center;
+                @include bg-contain;
+                background-image: url('../images/Shopcart/cart/plus-icon.svg');
+              }
+            }
+          }
+          input {
+            width: calc(100% - 4em);
+            height: 2em;
+            background-color: $theme-white;
+            border: none;
+          }
+        }
+        &__price {
+          @include font(1.1em, 1.5em, 600, 0px);
+          color: $theme-darkgreen;
+          span {
+            @include font(0.7em, 1.5em, 400, 0px);
+            margin-left: 0.5em;
+          }
+        }
+        &__delete {
+          @include size(1.2em, 1.2em);
+          @include bg-contain;
+          background-image: url('../images/Shopcart/cart/delete-icon.svg');
+        }
+      }
+      &__total {
+        @include absolute-lb(50%, 0%);
+        transform: translateX(-50%);
+        @include size(80%, 15vh);
+        background-color: $theme-white;
+        @include flex-end(center, row);
+        ul {
+          width: 50%;
+          padding-right: 1.5em;
+          li {
+            width: 100%;
+            @include flex-between(center, row);
+            @include font(0.8em, 2em, 400, 1px);
+            &:nth-child(3) {
+              label {
+                letter-spacing: 2px;
+              }
+              @include font(1.2em, 2em, 600, 0px);
+              span {
+                @include font(0.8em, 2em, 400, 1px);
+                margin-left: 0.5em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &__steps {
+    width: 45%;
+    .step1 {
+      @include absolute-center;
+      width: 90%;
+      margin: 0 auto;
+      height: 80vh;
+      border-radius: 1em;
+      background-color: $theme-lightgreen;
+      @include flex-center(center, column);
+      &__timebar {
+        width: 100%;
+        padding: 3em;
+        @include flex-between(center, row);
+        border-bottom: 1px solid #ccc;
+        li {
+          border: 2px solid $theme-green;
+          @include size(1.5em, 1.5em);
+          border-radius: 1.5em;
+          @include font(1em, 1.2em, 400, 0px);
+          text-align: center;
+          color: $theme-green;
+          &:nth-child(1) {
+            background-color: $theme-orange;
+            border: 2px solid $theme-orange;
+            color: #fff;
+            @include after('運送方式', 6em, 1.5em) {
+              @include absolute-lt(50%, 220%);
+              transform: translate(-50%, -50%);
+              @include font(0.7em, 1.5em, 400, 1px);
+              color: $theme-green;
+            }
+          }
+          &:nth-child(3) {
+            @include after('付款方式', 6em, 1.5em) {
+              @include absolute-lt(50%, 220%);
+              transform: translate(-50%, -50%);
+              @include font(0.7em, 1.5em, 400, 1px);
+            }
+          }
+          &:nth-child(5) {
+            @include after('確認完成', 6em, 1.5em) {
+              @include absolute-lt(50%, 220%);
+              transform: translate(-50%, -50%);
+              @include font(0.7em, 1.5em, 400, 1px);
+            }
+          }
+        }
+        hr {
+          @include size(calc((100% - 4.5em) / 2), 2px);
+          border: none;
+          background-color: $theme-green;
+        }
+      }
+      &__transport {
+        width: 75%;
+        height: 45vh;
+        margin: 1.5em 0;
+        overflow: auto;
+        &::-webkit-scrollbar {
+          width: 0;
+        }
+        li {
+          @include flex-start(center, row);
+          padding: 1em;
+          @include font(1em, 2em, 600, 1px);
+          border-bottom: 1px solid #ccc;
+          label {
+            width: 15%;
+            @include font(1em, 1.5em, 600, 1px);
+            color: $theme-darkgreen;
+            margin-right: 1em;
+            text-align: center;
+          }
+          .check {
+            width: 15%;
+            span {
+              @include size(1.8em, 1.8em);
+              @include absolute-center;
+              border: 1px solid $theme-darkgreen;
+              border-radius: 1.5em;
+              @include after('', 0.9em, 0.9em) {
+                @include absolute-center;
+                background-color: $theme-white;
+                border-radius: 1em;
+                cursor: pointer;
+              }
+            }
+          }
+          input[type='checkbox']:checked ~ label {
+            span {
+              background-color: $theme-darkgreen;
+            }
+          }
+          span {
+            @include font(0.6em, 2em, 400, 1px);
+            color: #777;
+          }
+          h3 {
+            color: $theme-red;
+          }
+          p {
+            color: $theme-darkgreen;
+          }
+          input {
+            display: none;
+          }
+          form {
+            @include flex-start(flex-start, column);
+          }
+          h2 {
+            width: 100%;
+            text-align: center;
+            color: $theme-red;
+            height: 1.5em;
+            @include font(1em, 1.5em, 400, 0px);
+          }
+        }
+        .store {
+          background-color: $theme-white;
+        }
+      }
+      &__connect {
+        @include size(50%, 2.5em);
+        margin-bottom: 1em;
+        background-color: $theme-darkgreen;
+        color: #fff;
+        border: none;
+        border-radius: 0.5em;
+        cursor: pointer;
+      }
+    }
+    .step2 {
+      @include absolute-center;
+      width: 90%;
+      margin: 0 auto;
+      height: 80vh;
+      border-radius: 1em;
+      background-color: $theme-lightgreen;
+      @include flex-center(center, column);
+      &__timebar {
+        width: 100%;
+        padding: 3em;
+        @include flex-between(center, row);
+        border-bottom: 1px solid #ccc;
+        li {
+          border: 2px solid $theme-green;
+          @include size(1.5em, 1.5em);
+          border-radius: 1.5em;
+          @include font(1em, 1.2em, 400, 0px);
+          text-align: center;
+          color: $theme-green;
+          &:nth-child(1) {
+            background-color: $theme-green;
+            @include bg-contain;
+            background-image: url('../images/Shopcart/steps/check-icon.svg  ');
+            @include after('運送方式', 6em, 1.5em) {
+              @include absolute-lt(50%, 220%);
+              transform: translate(-50%, -50%);
+              @include font(0.7em, 1.5em, 400, 1px);
+            }
+          }
+          &:nth-child(3) {
+            background-color: $theme-orange;
+            border: 2px solid $theme-orange;
+            color: #fff;
+            @include after('付款方式', 6em, 1.5em) {
+              @include absolute-lt(50%, 220%);
+              transform: translate(-50%, -50%);
+              @include font(0.7em, 1.5em, 400, 1px);
+              color: $theme-green;
+            }
+          }
+          &:nth-child(5) {
+            @include after('確認完成', 6em, 1.5em) {
+              @include absolute-lt(50%, 220%);
+              transform: translate(-50%, -50%);
+              @include font(0.7em, 1.5em, 400, 1px);
+            }
+          }
+        }
+        hr {
+          @include size(calc((100% - 4.5em) / 2), 2px);
+          border: none;
+          background-color: $theme-green;
+        }
+      }
+      &__transport {
+        width: 75%;
+        height: 45vh;
+        margin: 1.5em 0;
+        overflow: auto;
+        padding: 2em 0;
+        @include flex-start(center, column);
+        &::-webkit-scrollbar {
+          width: 0;
+        }
+        .checkBox {
+          width: 70%;
+          @include flex-between(center, row);
+          li {
+            width: 45%;
+            padding: 0.5em;
+            @include flex-around(center, row);
+            border: 1px solid #999;
+            border-radius: 3px;
+            p {
+              @include font(1em, 2em, 400, 1px);
+              color: #777;
+            }
+            label {
+              padding-left: 2em;
+              span {
+                @include size(1.1em, 1.1em);
+                @include absolute-lt(3%, 50%);
+                transform: translate(0, -50%);
+                border: 1px solid #999;
+                border-radius: 1.1em;
+                @include after('', 0.5em, 0.5em) {
+                  @include absolute-center;
+                  border-radius: 1em;
+                  cursor: pointer;
+                }
+              }
+            }
+            input {
+              display: none;
+            }
+            input[type='checkbox']:checked ~ label {
+              p {
+                color: #333;
+              }
+              span {
+                background-color: $theme-green;
+                &::after {
+                  background-color: $theme-white;
+                }
+              }
+            }
+          }
+        }
+        .cardnumber {
+          width: 70%;
+          margin-top: 1em;
+          @include flex-center(flex-start, column);
+          label {
+            @include font(0.9em, 1.5em, 400, 0px);
+            color: #333;
+          }
+          input {
+            @include size(100%, 3em);
+            padding: 0 0.5em;
+            margin-top: 0.5em;
+            background-color: transparent;
+            border: 1px solid #777;
+          }
+          p {
+            @include font(0.7em, 1.5em, 400, 0px);
+            margin-top: 0.5em;
+            color: #777;
+          }
+          figure {
+            margin-top: 0.5em;
+            @include flex-start(center, row);
+            span {
+              @include size(2.5em, 1.7em);
+              @include bg-contain;
+              &:nth-child(1) {
+                background-image: url('../images/Shopcart/steps/card1.svg');
+              }
+              &:nth-child(2) {
+                margin: 0 0.5em;
+                background-image: url('../images/Shopcart/steps/card2.svg');
+              }
+              &:nth-child(3) {
+                background-image: url('../images/Shopcart/steps/card3.svg');
+              }
+            }
+          }
+        }
+        .cardsecurity {
+          width: 70%;
+          margin-top: 1em;
+          ul {
+            @include flex-between(center, row);
+            li {
+              width: 45%;
+            }
+          }
+          label {
+            @include font(0.9em, 1.5em, 400, 0px);
+            color: #333;
+          }
+          input {
+            @include size(100%, 3em);
+            padding: 0 0.5em;
+            margin-top: 0.3em;
+            background-color: transparent;
+            border: 1px solid #777;
+          }
+          form {
+            margin-top: 1em;
+          }
+          .forget {
+            width: 70%;
+            @include flex-start(center, row);
+            &__label {
+              border: 1px solid #777;
+              @include size(1.1em, 1.1em);
+              border-radius: 0.3em;
+              cursor: pointer;
+              @include after('', 1.1em, 1.1em) {
+                @include absolute-center;
+                @include bg-contain;
+                background-image: url('../images/Login/check-icon.svg');
+                opacity: 0;
+              }
+            }
+            &__input {
+              display: none;
+            }
+            input[type='checkbox']:checked ~ label {
+              background-color: $theme-darkgreen;
+              border: none;
+              &::after {
+                opacity: 1;
+              }
+            }
+            span {
+              margin-left: 0.5em;
+              @include font(0.9em, 1.3em, 400, 2px);
+              color: #888;
+            }
+          }
+        }
+      }
+      &__connect {
+        @include size(50%, 2.5em);
+        margin-bottom: 1em;
+        background-color: $theme-darkgreen;
+        color: #fff;
+        border: none;
+        border-radius: 0.5em;
+        cursor: pointer;
+      }
+    }
+    .step3 {
+      @include absolute-center;
+      width: 90%;
+      margin: 0 auto;
+      height: 80vh;
+      border-radius: 1em;
+      background-color: $theme-white;
+      @include flex-center(center, column);
+      border: 1px solid #ccc;
+      &__timebar {
+        width: 100%;
+        padding: 3em;
+        @include flex-between(center, row);
+        border-bottom: 1px solid #ccc;
+        li {
+          border: 2px solid $theme-green;
+          @include size(1.5em, 1.5em);
+          border-radius: 1.5em;
+          @include font(1em, 1.2em, 400, 0px);
+          text-align: center;
+          color: $theme-green;
+          &:nth-child(1) {
+            background-color: $theme-green;
+            @include bg-contain;
+            background-image: url('../images/Shopcart/steps/check-icon.svg  ');
+            @include after('運送方式', 6em, 1.5em) {
+              @include absolute-lt(50%, 220%);
+              transform: translate(-50%, -50%);
+              @include font(0.7em, 1.5em, 400, 1px);
+            }
+          }
+          &:nth-child(3) {
+            background-color: $theme-green;
+            @include bg-contain;
+            background-image: url('../images/Shopcart/steps/check-icon.svg  ');
+            @include after('付款方式', 6em, 1.5em) {
+              @include absolute-lt(50%, 220%);
+              transform: translate(-50%, -50%);
+              @include font(0.7em, 1.5em, 400, 1px);
+            }
+          }
+          &:nth-child(5) {
+            background-color: $theme-green;
+            @include bg-contain;
+            background-image: url('../images/Shopcart/steps/check-icon.svg  ');
+            @include after('確認完成', 6em, 1.5em) {
+              @include absolute-lt(50%, 220%);
+              transform: translate(-50%, -50%);
+              @include font(0.7em, 1.5em, 400, 1px);
+            }
+          }
+        }
+        hr {
+          @include size(calc((100% - 4.5em) / 2), 2px);
+          border: none;
+          background-color: $theme-green;
+        }
+      }
+      &__transport {
+        width: 75%;
+        height: 45vh;
+        margin: 1.5em 0;
+        overflow: auto;
+        @include flex-start(center, column);
+        &::-webkit-scrollbar {
+          width: 0;
+        }
+        h1 {
+          @include font(1.5em, 1.5em, 600, 3px);
+        }
+        p {
+          @include font(0.4em, 1.5em, 400, 3px);
+          margin-top: 1em;
+        }
+        .complete {
+          margin-top: 1em;
+          width: 50%;
+          @include img-w(100%, contain);
+        }
+        .finalBox {
+          width: 100%;
+          padding: 2em 0;
+          @include flex-between(center, row);
+          li {
+            p {
+              @include flex-start(center, row);
+              @include font(0.5em, 2em, 400, 0px);
+              span {
+                display: block;
+                @include size(1.1em, 1.1em);
+                border-radius: 1em;
+                margin-left: 1.5em;
+                background-color: #eaa8b5;
+              }
+            }
+          }
+          .check {
+            @include flex-center(center, row);
+            border: 1px solid #000;
+            width: 35%;
+            height: 2em;
+            background-color: $theme-darkgreen;
+            text-align: center;
+            color: #fff;
+            border-radius: 0.5em;
+            @include font(1em, 2em, 400, 1px);
+            cursor: pointer;
+            span {
+              display: block;
+              @include size(1.2em, 1.2em);
+              margin-left: 0.5em;
+              @include bg-contain;
+              background-image: url('../images/Shopcart/steps/right-icon.svg');
+            }
+          }
+        }
+      }
+      &__connect {
+        @include size(50%, 2.5em);
+        margin-bottom: 1em;
+        background-color: $theme-darkgreen;
+        color: #fff;
+        border: none;
+        border-radius: 0.5em;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.hidden {
+  visibility: hidden;
+  z-index: -1;
+}

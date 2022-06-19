@@ -1,0 +1,17 @@
+@import '../import/style';
+
+.ShopPage__main {
+  width: 100%;
+  @import url('./_shopintro.scss');
+  @import url('./_shoporder.scss');
+}
+
+.hidden {
+  display: none;
+}
+.upBtn {
+  background-image: url('../../images/Shoppage/Info/up-icon.svg');
+}
+.downBtn {
+  background-image: url('../../images/Shoppage/Info/down-icon.svg');
+}

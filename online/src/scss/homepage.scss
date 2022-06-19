@@ -1,0 +1,282 @@
+@import './import/style';
+
+.Homepage__header {
+  width: 100%;
+  background-color: $theme-lightgreen;
+  .container {
+    margin: 0 auto;
+    @include flex-center(center, row);
+    width: 80%;
+    padding: 4em 0;
+  }
+  &__content {
+    flex: 1;
+    &__title {
+      h1 {
+        @include font(4em, 1.3em, 600, 0px);
+        color: $theme-green;
+        text-shadow: 1px 1px 2px #888;
+      }
+    }
+    &__btn {
+      @include flex-start(center, row);
+      margin-top: 2em;
+      button {
+        @include flex-center(center, row);
+        @include font(1.2em, 2.5em, 500, 0px);
+        padding: 0 2em;
+        background-color: $theme-yellow;
+        color: $theme-orange;
+        border-radius: 2em;
+        border: none;
+        cursor: pointer;
+        span {
+          display: inline-block;
+          @include size(2em, 2em);
+          margin-left: 1em;
+          @include bg-contain;
+          background-image: url('/images/header/orange-right.svg');
+        }
+      }
+      figure {
+        width: 35%;
+        margin-left: 3em;
+        img {
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+  &__imgBox {
+    flex: 1;
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+.Homepage__main {
+  //art hot and new
+
+  .art1 {
+    width: 100%;
+    @include bg-cover;
+    background-position: bottom;
+    background-image: url('/images/Homepage/art1/bgc-1.svg');
+    &--wave {
+      width: 100%;
+      @include img-w(100%, contain);
+    }
+    .hot {
+      width: 100%;
+      @include flex-center(center, column);
+      &__title {
+        width: 15%;
+        margin-top: 5em;
+        @include img-w(100%, contain);
+      }
+      &__items {
+        width: 90%;
+        @include flex-around(center, row wrap);
+        margin-top: 5em;
+        .item {
+          min-width: 180px;
+          width: calc((100% - 16em) / 4);
+          padding: 1em;
+          border-radius: 0.8em;
+          background-color: $theme-lightgreen;
+          &__img {
+            width: 100%;
+            @include img-w(100%, contain);
+          }
+          &__content {
+            h1 {
+              @include font(1.1em, 2em, 600, 0);
+            }
+            .text {
+              margin-top: 0.8em;
+              h2 {
+                @include font(1.2em, 2em, 600, 0);
+                span {
+                  color: $theme-red;
+                  margin-right: 0.5em;
+                }
+              }
+              p {
+                @include flex-between(center, row);
+                margin-top: 0.5em;
+                text-decoration: line-through;
+                span {
+                  display: block;
+                  @include size(1.8em, 1.8em);
+                  @include bg-contain;
+                  background-image: url('/images/Homepage/art1/plus.svg');
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .new {
+      width: 100%;
+      @include flex-center(center, column);
+      &__title {
+        width: 20%;
+        margin-top: 5em;
+        @include img-w(100%, contain);
+      }
+      &__items {
+        @include flex-around(flex-start, row wrap);
+        width: 90%;
+        li {
+          &:nth-child(1) {
+            .item__productBox {
+              background-color: $theme-yellow;
+            }
+          }
+          &:nth-child(2) {
+            margin-top: 5em;
+            .item__productBox {
+              background-color: #e7d3a1;
+            }
+          }
+          &:nth-child(3) {
+            margin-top: 10em;
+            .item__productBox {
+              background-color: #d89e75;
+              h1 {
+                color: $theme-white;
+              }
+              p {
+                color: $theme-white;
+              }
+            }
+          }
+        }
+        .item {
+          width: 30%;
+          @include flex-center(center, column);
+          .title {
+            width: 70%;
+            @include absolute-lt(50%, 0%);
+            transform: translateX(-50%);
+            z-index: 2;
+            @include img-w(100%, contain);
+          }
+          &__productBox {
+            @include flex-center(center, column);
+            margin-top: 2em;
+            padding: 2em 1em;
+            border-radius: 7em;
+            .product__img {
+              width: 100%;
+              @include img-w(100%, contain);
+            }
+            h1 {
+              @include font(1.3em, 2.5em, 600, 0.7px);
+              color: $theme-darkgreen;
+            }
+            p {
+              @include font(1.2em, 1.3em, 600, 0px);
+              color: $theme-darkgreen;
+            }
+          }
+          button {
+            @include flex-center(center, row);
+            @include font(1.2em, 2.5em, 500, 0px);
+            padding: 0 1.2em;
+            margin-top: 1em;
+            background-color: $theme-green;
+            color: $theme-white;
+            border-radius: 2em;
+            border: none;
+            span {
+              display: inline-block;
+              @include size(2em, 2em);
+              margin-left: 0.5em;
+              @include bg-contain;
+              background-image: url('/images/Homepage/art1/white-right.svg');
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //art sale
+
+  .art2 {
+    width: 100%;
+    @include bg-cover;
+    background-position: bottom;
+    background-image: url('/images/Homepage/art2/bgc-2.png');
+    &--wave {
+      @include img-w(100%, contain);
+    }
+    .sale {
+      width: 90%;
+      margin: 0 auto;
+      padding-top: 5em;
+      padding-bottom: 10em;
+      @include flex-center(center, row);
+      &__title {
+        @include flex-center(center, column);
+        width: 50%;
+        &__logo {
+          width: 100%;
+          @include flex-center(center, column);
+          @include img-w(50%, contain);
+        }
+        button {
+          @include flex-center(center, row);
+          @include font(1.2em, 2.5em, 500, 0px);
+          padding: 0 1.2em;
+          margin-top: 1em;
+          background-color: $theme-green;
+          color: $theme-white;
+          border-radius: 2em;
+          border: none;
+          span {
+            display: inline-block;
+            @include size(2em, 2em);
+            margin-left: 0.5em;
+            @include bg-contain;
+            background-image: url('/images/Homepage/art1/white-right.svg');
+          }
+        }
+      }
+      &__imgBox {
+        width: 50%;
+        @include flex-start(flex-start, row);
+        p {
+          @include font(1.3em, 1.5em, 500, 2px);
+          color: $theme-green;
+        }
+        &__img {
+          width: 50%;
+          @include img-w(100%, contain) {
+            margin-left: 3em;
+          }
+        }
+      }
+    }
+  }
+
+  // art3 style
+
+  .art3 {
+    width: 100%;
+    height: 100vh;
+    @include bg-cover;
+    background-position: bottom;
+    background-image: url('/images/Homepage/art3/bgc-3.png');
+    &--wave {
+      @include absolute-rb(0%, 0%);
+      width: 100%;
+      @include img-w(100%, contain);
+    }
+  }
+}

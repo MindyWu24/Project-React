@@ -1,0 +1,11 @@
+@import './reset';
+@import './animation';
+@import './tools';
+@import '../const/const.scss';
+
+* {
+  position: relative;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Noto Sans', sans-serif;
+}

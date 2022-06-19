@@ -1,0 +1,155 @@
+@import '../import/style';
+.shopIntro {
+  width: 50%;
+  background-color: $theme-white;
+  padding: 2em 0;
+  @include flex-start(center, column);
+  .imgBox {
+    width: 70%;
+    .breadcrumbs {
+      @include flex-start(center, row);
+      li {
+        @include flex-center(center, row);
+        a {
+          @include font(0.5em, 1.5em, 400, 1px);
+          color: $theme-brown;
+        }
+        span {
+          @include size(1.3em, 1.3em);
+          margin: 0 0.1em;
+          @include bg-contain;
+          background-image: url('../../images/Shoppage/Info/bread-icon.svg');
+        }
+      }
+    }
+  }
+  figure {
+    margin-top: 1em;
+    width: 100%;
+    @include img-h(100%, contain);
+  }
+  .productImages {
+    margin-top: 1em;
+    width: 40%;
+    @include flex-between(center, row);
+    li {
+      border-radius: 0.3em;
+      overflow: hidden;
+      width: 30%;
+      @include img-w(100%, contain);
+    }
+  }
+  .introBox {
+    width: 70%;
+    margin-top: 3em;
+    &__list {
+      width: 80%;
+      @include flex-center(center, row);
+      li {
+        flex: 1;
+        border: 1px solid $theme-green;
+        a {
+          display: block;
+          padding: 0 0.5em;
+          @include font(1em, 2.5em, 600, 2px);
+          text-align: center;
+          color: $theme-green;
+        }
+        &:nth-child(1) {
+          background-color: $theme-green;
+          a {
+            color: $theme-white;
+          }
+          border-radius: 0.7em 0 0 0;
+        }
+        &:nth-child(3) {
+          border-radius: 0 0.7em 0 0;
+        }
+      }
+    }
+    figure {
+      @include flex-start(center, column);
+      width: 100%;
+      @include img-w(100%, contain) {
+        margin-top: 2em;
+      }
+    }
+  }
+  .evaluation {
+    width: 70%;
+    margin-top: 3em;
+    &__total {
+      @include flex-between(center, row);
+      &__info {
+        h1 {
+          @include font(1em, 2em, 600, 2px);
+          color: #666;
+        }
+        h2 {
+          @include flex-start(center, row);
+          @include font(1em, 2em, 600, 2px);
+          color: $theme-red;
+          margin: 0.3em 0;
+          span {
+            @include size(1.3em, 1.3em);
+            @include bg-contain;
+            background-image: url(../../images/Shoppage/Info/star-icon.svg);
+            &:last-child {
+              margin-right: 0.3em;
+            }
+          }
+        }
+        p {
+          @include font(0.7em, 2em, 300, 1px);
+        }
+      }
+      &__downList {
+        label {
+          @include font(0.9em, 2em, 600, 1px);
+          color: $theme-darkgreen;
+        }
+        select {
+          margin-left: 1em;
+          background-color: transparent;
+          padding: 0.5em 1em;
+          color: $theme-darkgreen;
+        }
+      }
+    }
+    &__items {
+      width: 100%;
+      margin-top: 1.5em;
+      padding: 1em 0;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      .evaluation__item {
+        padding: 1em 0;
+        &__title {
+          @include flex-start(center, row);
+          span {
+            @include size(1em, 1em);
+            @include bg-contain;
+            background-image: url(../../images/Shoppage/Info/star-icon.svg);
+          }
+          p {
+            color: #888;
+            margin-left: 1em;
+          }
+        }
+        &__content {
+          margin-top: 0.5em;
+          background-color: #f7f0ea;
+          padding: 1em 0;
+          h2 {
+            @include font(0.9em, 2em, 400, 1px);
+            color: #888;
+          }
+          h1 {
+            @include font(1.1em, 2em, 400, 1px);
+            color: $theme-darkgreen;
+          }
+        }
+      }
+    }
+  }
+}
