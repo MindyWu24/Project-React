@@ -262,7 +262,7 @@ $theme-vh: calc(100vh - 3.8em);
           &:nth-child(1) {
             background-color: $theme-green;
             @include bg-contain;
-            background-image: url('../images/Shopcart/steps/check-icon.svg  ');
+            background-image: url('../images/Shopcart/steps/check.png');
             @include after('運送方式', 6em, 1.5em) {
               @include absolute-lt(50%, 220%);
               transform: translate(-50%, -50%);
