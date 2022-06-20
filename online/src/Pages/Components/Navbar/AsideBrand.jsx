@@ -12,16 +12,16 @@ const AsideBrand = ({ handleAsideBrand, brand }) => {
         <span></span>
       </li>
       <li>
-        <Link to={'/#HOT'}>熱銷排行</Link>
+        <Link to={'/Project-React#HOT'}>熱銷排行</Link>
       </li>
       <li>
-        <Link to={'/#NEW'}>最新商品</Link>
+        <Link to={'/Project-React#NEW'}>最新商品</Link>
       </li>
       <li>
-        <Link to={'/#SALE'}>優惠情報</Link>
+        <Link to={'/Project-React#SALE'}>優惠情報</Link>
       </li>
       <li>
-        <Link to={'/#STYLE'}>風格體驗</Link>
+        <Link to={'/Project-React#STYLE'}>風格體驗</Link>
       </li>
     </ul>
   );

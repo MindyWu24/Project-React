@@ -7,7 +7,7 @@ const Main = () => {
     <main className="Homepage__main">
       <HotNew />
       <Sale />
-      <Style />
+      {/* <Style /> */}
     </main>
   );
 };

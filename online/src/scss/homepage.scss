@@ -211,7 +211,6 @@
   .art2 {
     width: 100%;
     @include bg-cover;
-    background-position: bottom;
     background-image: url('/images/Homepage/art2/bgc-2.png');
     &--wave {
       @include img-w(100%, contain);
@@ -219,8 +218,8 @@
     .sale {
       width: 90%;
       margin: 0 auto;
-      padding-top: 5em;
-      padding-bottom: 10em;
+      padding-top: 10em;
+      padding-bottom: 13em;
       @include flex-center(center, row);
       &__title {
         @include flex-center(center, column);
