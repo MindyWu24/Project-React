@@ -1,4 +1,6 @@
-const NewItem = () => {
+import { HashLink as Link } from 'react-router-hash-link';
+import { handleTopBtn } from '../../../../lib/function';
+const NewItem = ({ item }) => {
   return (
     <li className="item">
       <figure className="title">
@@ -9,14 +11,19 @@ const NewItem = () => {
       </figure>
       <section className="item__productBox">
         <figure className="product__img">
-          <img src="./Project-React/images/Homepage/art1/new/new2.png" alt="" />
+          <img src={item.img} alt="" />
         </figure>
-        <h1>Oatside 職人燕麥植物奶</h1>
-        <p>NT$165</p>
+        <h1>
+          {item.brand} {item.name}
+        </h1>
+        <p>NT${item.price}</p>
       </section>
-      <button>
-        SHOP NOW<span></span>
-      </button>
+
+      <Link to={'/shopPage'} onClick={handleTopBtn}>
+        <button>
+          SHOP NOW<span></span>
+        </button>
+      </Link>
     </li>
   );
 };

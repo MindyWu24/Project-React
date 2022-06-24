@@ -1,4 +1,4 @@
-const Step3 = ({ handleStepBtn, step }) => {
+const Step3 = ({ handleStepBtn, step, total }) => {
   return (
     <article className={step == 3 ? 'step3' : 'step3 hidden'}>
       <ul className="step3__timebar">
@@ -23,7 +23,7 @@ const Step3 = ({ handleStepBtn, step }) => {
               已收到訂單<span></span>
             </p>
             <p>2022/05/22 星期二</p>
-            <p>NT$923</p>
+            <p>NT${total}</p>
           </li>
           <li className="check">
             查看訂單<span></span>

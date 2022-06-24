@@ -1,7 +1,7 @@
 @import './import/style';
 
 .navbar {
-  @include size(100%, 3.8em);
+  @include size(100%, 5em);
   .container {
     @include flex-between(center, row);
     @include fixed-lt(0%, 0%);
@@ -16,7 +16,7 @@
     &__logo {
       display: block;
       width: 7em;
-      height: 3.8em;
+      height: 5em;
       @include bg-contain;
       background-image: url('../images/navbar/icon/logo.svg');
     }
@@ -24,7 +24,7 @@
       @include flex-start(center, row);
       margin: 0 2em;
       li {
-        height: 3.8em;
+        height: 5em;
         @include flex-center(center, row);
         a {
           @include font(1.1em, 1.5em, 500, 2px);

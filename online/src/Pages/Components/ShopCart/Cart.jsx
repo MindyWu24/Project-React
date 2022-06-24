@@ -1,4 +1,9 @@
-const Cart = () => {
+const Cart = ({
+  price,
+  handleDecreaseNumber,
+  handleIncreaseNumber,
+  number,
+}) => {
   return (
     <li className="cart">
       <figure className="cart__img">
@@ -9,12 +14,13 @@ const Cart = () => {
         <p>咖啡師燕麥奶</p>
       </section>
       <form className="cart__btn">
-        <span></span>
-        <input type="text" />
-        <span></span>
+        <span onClick={handleDecreaseNumber}></span>
+        <span>{number}</span>
+        <span onClick={handleIncreaseNumber}></span>
       </form>
       <h2 className="cart__price">
-        NT$199<span>元</span>
+        NT${price}
+        <span>元</span>
       </h2>
       <span className="cart__delete"></span>
     </li>

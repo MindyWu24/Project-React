@@ -8,7 +8,7 @@ const Item = ({ textStyle, product, handleSetData }) => {
         <img src={product.intro__img} alt="" />
       </figure>
       <h3>{product.brand}</h3>
-      <Link className={textStyle} to="/shopPage" onClick={handleSetData}>
+      <Link className={textStyle} to="/shopPage" onClick={handleTopBtn}>
         {product.name}
       </Link>
     </li>

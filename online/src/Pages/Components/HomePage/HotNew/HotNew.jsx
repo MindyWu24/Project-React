@@ -1,5 +1,6 @@
 import HotItem from './HotItem';
 import NewItem from './NewItem';
+import { brand4 } from '../../../../lib/productDB';
 
 const HotNew = () => {
   return (
@@ -19,6 +20,7 @@ const HotNew = () => {
           <HotItem />
           <HotItem />
           <HotItem />
+          <HotItem />
         </ul>
       </section>
       <section className="new" id="NEW">
@@ -29,9 +31,9 @@ const HotNew = () => {
           />
         </figure>
         <ul className="new__items">
-          <NewItem />
-          <NewItem />
-          <NewItem />
+          {brand4.map((item) => (
+            <NewItem item={item} />
+          ))}
         </ul>
       </section>
     </article>

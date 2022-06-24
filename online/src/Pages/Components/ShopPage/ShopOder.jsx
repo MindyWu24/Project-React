@@ -1,8 +1,20 @@
-import { HashLink as Link } from 'react-router-hash-link';
 import { useState } from 'react';
 const ShopOder = () => {
   const shopOder = document.querySelector('.shopOder');
   const [isDown, setIsDown] = useState('false');
+  const [heart, setHeart] = useState('false');
+  const [number, setNumber] = useState(0);
+  const handleHeart = () => {
+    setHeart(!heart);
+  };
+
+  const handleIncreaseNumber = () => {
+    setNumber(number + 1);
+  };
+  const handleDecreaseNumber = () => {
+    number > 0 && setNumber(number - 1);
+  };
+
   const handleDownList = () => {
     if (!isDown) {
       shopOder.scrollTo(0, 0);
@@ -27,13 +39,16 @@ const ShopOder = () => {
           <ul className="button__number">
             <label>數量</label>
             <li>
-              <span></span>
-              <input type="text" value={1} readOnly />
-              <span></span>
+              <span onClick={handleDecreaseNumber}></span>
+              <span>{number}</span>
+              <span onClick={handleIncreaseNumber}></span>
             </li>
           </ul>
           <ul className="button__shopCart">
-            <li></li>
+            <li
+              className={heart ? 'heart' : 'red-heart'}
+              onClick={handleHeart}
+            ></li>
             <li></li>
             <button>加入購物車</button>
           </ul>

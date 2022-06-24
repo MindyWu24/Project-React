@@ -4,6 +4,8 @@ import { v4 as uuidv4 } from 'uuid';
 const Intro = ({ item }) => {
   return (
     <article className={item.productBgcStyle} id={item.pageID}>
+      <figure className={item.leftStyle}></figure>
+      <figure className={item.rightStyle}></figure>
       <ul className="product__intro">
         <li>
           <img src={item.logo} alt="" />

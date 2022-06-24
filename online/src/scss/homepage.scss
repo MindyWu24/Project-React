@@ -7,7 +7,8 @@
     margin: 0 auto;
     @include flex-center(center, row);
     width: 80%;
-    padding: 4em 0;
+    padding-top: 8em;
+    padding-bottom: 2em;
   }
   &__content {
     flex: 1;
@@ -82,8 +83,12 @@
         @include flex-around(center, row wrap);
         margin-top: 5em;
         .item {
+          transition: all 0.3s;
+          &:hover {
+            transform: scale(1.05);
+          }
           min-width: 180px;
-          width: calc((100% - 16em) / 4);
+          width: calc((100% - 16em) / 5);
           padding: 1em;
           border-radius: 0.8em;
           background-color: $theme-lightgreen;
@@ -93,12 +98,14 @@
           }
           &__content {
             h1 {
-              @include font(1.1em, 2em, 600, 0);
+              @include font(1em, 2em, 600, 0);
+              color: $theme-darkgreen;
             }
             .text {
               margin-top: 0.8em;
               h2 {
                 @include font(1.2em, 2em, 600, 0);
+                color: #555;
                 span {
                   color: $theme-red;
                   margin-right: 0.5em;
@@ -108,11 +115,16 @@
                 @include flex-between(center, row);
                 margin-top: 0.5em;
                 text-decoration: line-through;
+                color: #555;
                 span {
                   display: block;
                   @include size(1.8em, 1.8em);
                   @include bg-contain;
                   background-image: url('/images/Homepage/art1/plus.svg');
+                  cursor: pointer;
+                  &:active {
+                    transform: rotate(15deg);
+                  }
                 }
               }
             }
@@ -157,6 +169,11 @@
           }
         }
         .item {
+          &:hover {
+            img {
+              transform: scale(1.05);
+            }
+          }
           width: 30%;
           @include flex-center(center, column);
           .title {
@@ -193,12 +210,16 @@
             color: $theme-white;
             border-radius: 2em;
             border: none;
+            cursor: pointer;
             span {
               display: inline-block;
               @include size(2em, 2em);
               margin-left: 0.5em;
               @include bg-contain;
               background-image: url('/images/Homepage/art1/white-right.svg');
+            }
+            &:active {
+              transform: scale(0.9);
             }
           }
         }
@@ -219,7 +240,7 @@
       width: 90%;
       margin: 0 auto;
       padding-top: 10em;
-      padding-bottom: 13em;
+      padding-bottom: 16em;
       @include flex-center(center, row);
       &__title {
         @include flex-center(center, column);
@@ -238,12 +259,16 @@
           color: $theme-white;
           border-radius: 2em;
           border: none;
+          cursor: pointer;
           span {
             display: inline-block;
             @include size(2em, 2em);
             margin-left: 0.5em;
             @include bg-contain;
             background-image: url('/images/Homepage/art1/white-right.svg');
+          }
+          &:active {
+            transform: scale(0.9);
           }
         }
       }

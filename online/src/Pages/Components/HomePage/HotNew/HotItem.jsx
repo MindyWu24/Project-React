@@ -1,3 +1,5 @@
+import { HashLink as Link } from 'react-router-hash-link';
+import { handleTopBtn } from '../../../../lib/function';
 const HotItem = () => {
   return (
     <li className="item">
@@ -14,7 +16,10 @@ const HotItem = () => {
             <span>24%</span> NT$999
           </h2>
           <p>
-            NT$1314<span></span>
+            NT$1314
+            <Link to={'/shopPage'} onClick={handleTopBtn}>
+              <span></span>
+            </Link>
           </p>
         </div>
       </section>

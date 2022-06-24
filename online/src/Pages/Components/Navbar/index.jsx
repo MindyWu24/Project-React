@@ -6,6 +6,10 @@ import Heart from './Heart';
 
 function Navbar() {
   const [brand, setBrand] = useState(0);
+  const [heart, setHeart] = useState(false);
+  const handleHeart = () => {
+    setHeart(!heart);
+  };
   function handleAsideBrand(num) {
     setBrand(num);
   }
@@ -41,7 +45,10 @@ function Navbar() {
                   </li>
                 </ul>
                 <figure className="brand__imgBox">
-                  <img src="./images/navbar/brand/brand-init.png" alt="" />
+                  <img
+                    src="./Project-React/images/navbar/brand/brand-init.png"
+                    alt=""
+                  />
                 </figure>
               </section>
             </li>
@@ -55,7 +62,7 @@ function Navbar() {
               <Link to="/Project-React#SALE">優惠情報</Link>
             </li>
             <li>
-              <Link to="/Project-React#STYLE">風格體驗</Link>
+              <a href="http://127.0.0.1:5500/index.html">風格體驗</a>
             </li>
             <li className="search">
               <input type="text" placeholder="Search" />
@@ -66,11 +73,7 @@ function Navbar() {
 
         <ul className="navbar__icon">
           <li>
-            <span
-              onClick={() => {
-                handleAsideBrand(2);
-              }}
-            ></span>
+            <span onClick={handleHeart}></span>
           </li>
           <li>
             <Link
@@ -97,7 +100,7 @@ function Navbar() {
           </li>
         </ul>
         <AsideBrand handleAsideBrand={handleAsideBrand} brand={brand} />
-        <Heart handleAsideBrand={handleAsideBrand} brand={brand} />
+        <Heart heart={heart} />
       </article>
     </nav>
   );

@@ -1,4 +1,10 @@
+import { useState } from 'react';
+
 const Step1 = ({ handleStepBtn, step }) => {
+  const [color, setColor] = useState(0);
+  const handleColor = (n) => {
+    setColor(n);
+  };
   return (
     <article className={step == 1 ? 'step1' : 'step1 hidden'}>
       <ul className="step1__timebar">
@@ -9,15 +15,25 @@ const Step1 = ({ handleStepBtn, step }) => {
         <li>3</li>
       </ul>
       <ul className="step1__transport">
-        <li>
+        <li
+          className={color == 1 ? 'white' : 'green'}
+          onClick={() => {
+            handleColor(1);
+          }}
+        >
           <label htmlFor="">宅配</label>
           <h3>$80</h3>
         </li>
-        <li className="store">
+        <li
+          className={color == 2 ? 'white' : 'green'}
+          onClick={() => {
+            handleColor(2);
+          }}
+        >
           <label htmlFor="">7-11</label>
           <h3>$80</h3>
         </li>
-        <li className="store">
+        <li className={color == 2 ? 'white' : 'hidden'}>
           <input type="checkbox" id="select1" />
           <label className="check" htmlFor="select1">
             <span></span>
@@ -28,7 +44,7 @@ const Step1 = ({ handleStepBtn, step }) => {
             <span>台北市萬華區桂林路156號</span>
           </form>
         </li>
-        <li className="store">
+        <li className={color == 2 ? 'white' : 'hidden'}>
           <input type="checkbox" id="select" />
           <label className="check" htmlFor="select">
             <span></span>
@@ -39,7 +55,7 @@ const Step1 = ({ handleStepBtn, step }) => {
             <span>台北市萬華區桂林路156號</span>
           </form>
         </li>
-        <li className="store">
+        <li className={color == 2 ? 'white' : 'hidden'}>
           <h2>新增7-11門市</h2>
         </li>
       </ul>

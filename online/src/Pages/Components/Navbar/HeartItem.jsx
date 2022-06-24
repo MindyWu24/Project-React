@@ -1,13 +1,13 @@
-const HeartItem = () => {
+const HeartItem = ({ item }) => {
   return (
     <li className="HeartList__items__item">
       <figure className="img">
-        <img src="./Project-React/images/navbar/heart/p1.png" alt="" />
+        <img src={item.img} alt="" />
       </figure>
       <section className="title">
-        <p>CALIFA FARMS</p>
-        <p>咖啡師燕麥奶</p>
-        <p>NT$199 元</p>
+        <p>{item.brand}</p>
+        <p>{item.name}</p>
+        <p>NT${item.price} 元</p>
       </section>
       <span className="heart"></span>
     </li>

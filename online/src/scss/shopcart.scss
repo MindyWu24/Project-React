@@ -1,6 +1,6 @@
 @import './import/style';
 
-$theme-vh: calc(100vh - 3.8em);
+$theme-vh: calc(100vh - 5em);
 
 .ShopCart {
   @include size(100%, $theme-vh);
@@ -43,12 +43,22 @@ $theme-vh: calc(100vh - 3.8em);
           span {
             @include size(2em, 2em);
             cursor: pointer;
+
             &:nth-child(1) {
               @include after('', 1em, 1em) {
                 @include absolute-center;
                 @include bg-contain;
                 background-image: url('../images/Shopcart/cart/minus-icon.svg');
               }
+              &:active {
+                transform: scale(0.9);
+              }
+            }
+            &:nth-child(2) {
+              @include size(4em, 2em);
+              text-align: center;
+              line-height: 2em;
+              background-color: $theme-white;
             }
             &:nth-child(3) {
               @include after('', 1em, 1em) {
@@ -56,13 +66,10 @@ $theme-vh: calc(100vh - 3.8em);
                 @include bg-contain;
                 background-image: url('../images/Shopcart/cart/plus-icon.svg');
               }
+              &:active {
+                transform: scale(0.8);
+              }
             }
-          }
-          input {
-            width: calc(100% - 4em);
-            height: 2em;
-            background-color: $theme-white;
-            border: none;
           }
         }
         &__price {
@@ -77,6 +84,10 @@ $theme-vh: calc(100vh - 3.8em);
           @include size(1.2em, 1.2em);
           @include bg-contain;
           background-image: url('../images/Shopcart/cart/delete-icon.svg');
+          cursor: pointer;
+          &:active {
+            transform: scale(0.9) rotate(20deg);
+          }
         }
       }
       &__total {
@@ -223,10 +234,17 @@ $theme-vh: calc(100vh - 3.8em);
             color: $theme-red;
             height: 1.5em;
             @include font(1em, 1.5em, 400, 0px);
+            cursor: pointer;
+            &:active {
+              transform: scale(0.9);
+            }
           }
-        }
-        .store {
-          background-color: $theme-white;
+          &:nth-child(1) {
+            cursor: pointer;
+          }
+          &:nth-child(2) {
+            cursor: pointer;
+          }
         }
       }
       &__connect {
@@ -421,6 +439,7 @@ $theme-vh: calc(100vh - 3.8em);
               @include after('', 1.1em, 1.1em) {
                 @include absolute-center;
                 @include bg-contain;
+                background-image: url('../images/Shopcart/steps/check.png');
                 opacity: 0;
               }
             }
@@ -584,4 +603,12 @@ $theme-vh: calc(100vh - 3.8em);
 .hidden {
   visibility: hidden;
   z-index: -1;
+}
+
+.green {
+  background-color: $theme-lightgreen;
+}
+
+.white {
+  background-color: $theme-white;
 }

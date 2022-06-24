@@ -1,16 +1,14 @@
 import HeartItem from './HeartItem';
-
-const Heart = ({ handleAsideBrand, brand }) => {
+import { brand2 } from '../../../lib/productDB';
+const Heart = ({ heart }) => {
   return (
-    <article className={brand == 2 ? 'HeartList visible' : 'HeartList'}>
+    <article className={heart ? 'HeartList visible' : 'HeartList'}>
       <span className="wave"></span>
-      <span className="close" onClick={handleAsideBrand}></span>
       <h1>我的收藏</h1>
       <ul className="HeartList__items">
-        <HeartItem />
-        <HeartItem />
-        <HeartItem />
-        <HeartItem />
+        {brand2.map((item) => (
+          <HeartItem item={item} />
+        ))}
       </ul>
     </article>
   );
