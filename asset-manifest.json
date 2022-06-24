@@ -1,18 +1,24 @@
 {
   "files": {
-    "main.css": "/Project-React/static/css/main.fe730629.css",
-    "main.js": "/Project-React/static/js/main.2876ebec.js",
+    "main.css": "/Project-React/static/css/main.0f06684d.css",
+    "main.js": "/Project-React/static/js/main.2c1925a6.js",
     "static/media/bgc-3.png": "/Project-React/static/media/bgc-3.e099f985062fbe20985a.png",
     "static/media/bgc-2.png": "/Project-React/static/media/bgc-2.d85f1c396aec3838ccd4.png",
     "static/media/fb-icon.svg": "/Project-React/static/media/fb-icon.7fb3933da596f6f9d654.svg",
     "static/media/google-icon.svg": "/Project-React/static/media/google-icon.446b8cfc7aeb04e1719e.svg",
+    "static/media/b-3-l.png": "/Project-React/static/media/b-3-l.40d4dc2393bd1f0e5133.png",
+    "static/media/b-4-r.png": "/Project-React/static/media/b-4-r.98d541b7a8c169ce02f7.png",
     "static/media/bgc-1.svg": "/Project-React/static/media/bgc-1.708c2bd25ec0646e5403.svg",
+    "static/media/b-4-l.png": "/Project-React/static/media/b-4-l.37abec20f5fcd6dfa1b0.png",
+    "static/media/b-3-r.png": "/Project-React/static/media/b-3-r.d94b8de781a3de86e184.png",
     "static/media/brand-1.png": "/Project-React/static/media/brand-1.d1aa91cdf307f69a209c.png",
+    "static/media/b-2-r.png": "/Project-React/static/media/b-2-r.8806a94b24a2fccc033b.png",
     "static/media/brand-4.png": "/Project-React/static/media/brand-4.a77b15bd7a954527a7ad.png",
     "static/media/wave.png": "/Project-React/static/media/wave.395da8ece70cb1e4c22a.png",
     "static/media/brand-2.png": "/Project-React/static/media/brand-2.c8b02fea4ec0703dfb4f.png",
     "static/media/brand-3.png": "/Project-React/static/media/brand-3.9da25f775c57020f8322.png",
     "static/media/bgc.png": "/Project-React/static/media/bgc.df7890a3764ba39f4837.png",
+    "static/media/b-2-l.png": "/Project-React/static/media/b-2-l.d071f8f5d5ba4048ebfa.png",
     "static/media/logo.svg": "/Project-React/static/media/logo.015d124053cf74be0a92.svg",
     "static/media/card3.svg": "/Project-React/static/media/card3.b5080b178b87953a21a5.svg",
     "static/media/card1.svg": "/Project-React/static/media/card1.b9e6dfc8753017221a8f.svg",
@@ -43,11 +49,11 @@
     "static/media/down-icon.svg": "/Project-React/static/media/down-icon.72b7c70f0b2bbae0b58f.svg",
     "static/media/up-icon.svg": "/Project-React/static/media/up-icon.a864b69a59249a3c039d.svg",
     "static/media/minus-icon.svg": "/Project-React/static/media/minus-icon.fa64761c56593a67a230.svg",
-    "main.fe730629.css.map": "/Project-React/static/css/main.fe730629.css.map",
-    "main.2876ebec.js.map": "/Project-React/static/js/main.2876ebec.js.map"
+    "main.0f06684d.css.map": "/Project-React/static/css/main.0f06684d.css.map",
+    "main.2c1925a6.js.map": "/Project-React/static/js/main.2c1925a6.js.map"
   },
   "entrypoints": [
-    "static/css/main.fe730629.css",
-    "static/js/main.2876ebec.js"
+    "static/css/main.0f06684d.css",
+    "static/js/main.2c1925a6.js"
   ]
 }
