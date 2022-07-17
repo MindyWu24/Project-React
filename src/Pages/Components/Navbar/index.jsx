@@ -46,7 +46,7 @@ function Navbar() {
                 </ul>
                 <figure className="brand__imgBox">
                   <img
-                    src="./Project-React/images/navbar/brand/brand-init.png"
+                    src="/images/navbar/brand/brand-init.png"
                     alt=""
                   />
                 </figure>

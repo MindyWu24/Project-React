@@ -5,7 +5,7 @@ const NewItem = ({ item }) => {
     <li className="item">
       <figure className="title">
         <img
-          src="./Project-React/images/Homepage/art1/new/new-title.png"
+          src="/images/Homepage/art1/new/new-title.png"
           alt=""
         />
       </figure>

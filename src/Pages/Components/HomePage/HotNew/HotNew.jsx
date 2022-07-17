@@ -6,12 +6,12 @@ const HotNew = () => {
   return (
     <article className="art1" id="HOT">
       <figure className="art1--wave">
-        <img src="./Project-React/images/Homepage/art1/wave-1.svg" alt="" />
+        <img src="/images/Homepage/art1/wave-1.svg" alt="" />
       </figure>
       <section className="hot">
         <figure className="hot__title">
           <img
-            src="./Project-React/images/Homepage/art1/hot/title-1.svg"
+            src="/images/Homepage/art1/hot/title-1.svg"
             alt=""
           />
         </figure>
@@ -26,7 +26,7 @@ const HotNew = () => {
       <section className="new" id="NEW">
         <figure className="new__title">
           <img
-            src="./Project-React/images/Homepage/art1/new/title-2.svg"
+            src="/images/Homepage/art1/new/title-2.svg"
             alt=""
           />
         </figure>

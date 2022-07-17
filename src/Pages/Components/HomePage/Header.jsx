@@ -22,7 +22,7 @@ function Header() {
 
             <figure>
               <img
-                src="./Project-React/images/header/header-product.png"
+                src="/images/header/header-product.png"
                 alt=""
               />
             </figure>
@@ -30,7 +30,7 @@ function Header() {
         </ul>
         <section className="Homepage__header__imgBox">
           <img
-            src="./Project-React/images/header/header__animation.svg"
+            src="/images/header/header__animation.svg"
             alt=""
           />
         </section>

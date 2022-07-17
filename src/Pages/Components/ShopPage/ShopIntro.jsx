@@ -25,26 +25,26 @@ const ShopIntro = () => {
         </ul>
         <figure>
           <img
-            src="./Project-React/images/Shoppage/info/product-1.png"
+            src="/images/Shoppage/info/product-1.png"
             alt=""
           />
         </figure>
         <ul className="productImages">
           <li>
             <img
-              src="./Project-React/images/Shoppage/info/product-2.png"
+              src="/images/Shoppage/info/product-2.png"
               alt=""
             />
           </li>
           <li>
             <img
-              src="./Project-React/images/Shoppage/info/product-3.png"
+              src="/images/Shoppage/info/product-3.png"
               alt=""
             />
           </li>
           <li>
             <img
-              src="./Project-React/images/Shoppage/info/product-4.png"
+              src="/images/Shoppage/info/product-4.png"
               alt=""
             />
           </li>
@@ -64,21 +64,21 @@ const ShopIntro = () => {
         </ul>
         <figure>
           <img
-            src="./Project-React/images/Shoppage/info/product-2.png"
+            src="/images/Shoppage/info/product-2.png"
             alt=""
           />
-          <img src="./Project-React/images/Shoppage/info/intro-1.png" alt="" />
+          <img src="/images/Shoppage/info/intro-1.png" alt="" />
           <img
-            src="./Project-React/images/Shoppage/info/product-3.png"
+            src="/images/Shoppage/info/product-3.png"
             alt=""
           />
           <img
-            src="./Project-React/images/Shoppage/info/product-4.png"
+            src="/images/Shoppage/info/product-4.png"
             alt=""
           />
           <img
             id="productIngredients"
-            src="./Project-React/images/Shoppage/info/intro-2.png"
+            src="/images/Shoppage/info/intro-2.png"
             alt=""
           />
         </figure>

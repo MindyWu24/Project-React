@@ -5,7 +5,7 @@ const HotItem = () => {
     <li className="item">
       <figure className="item__img">
         <img
-          src="./Project-React/images/Homepage/art1/hot/hot-product.png"
+          src="/images/Homepage/art1/hot/hot-product.png"
           alt=""
         />
       </figure>

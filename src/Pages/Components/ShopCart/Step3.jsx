@@ -13,7 +13,7 @@ const Step3 = ({ handleStepBtn, step, total }) => {
         <p>訂單資訊已發送至您的信箱 !</p>
         <figure className="complete">
           <img
-            src="./Project-React/images/Shopcart/steps/complete.png"
+            src="/images/Shopcart/steps/complete.png"
             alt=""
           />
         </figure>
