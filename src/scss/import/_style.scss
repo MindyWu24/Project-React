@@ -2,10 +2,12 @@
 @import './animation';
 @import './tools';
 @import '../const/const.scss';
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900;600&display=swap');
 
 * {
   position: relative;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: 'Noto Sans', sans-serif;
+  font-family:'roboto', 'Noto Sans', sans-serif;
 }
