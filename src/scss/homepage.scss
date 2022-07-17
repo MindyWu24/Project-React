@@ -15,6 +15,7 @@
     &__title {
       h1 {
         @include font(4em, 1.3em, 900, 0px);
+        font-family: roboto;
         color: $theme-green;
       }
     }
